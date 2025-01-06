@@ -1,0 +1,146 @@
+.earnings-section {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background: linear-gradient(120deg, #f6f9fc, #e9eff5);
+  color: #333;
+  border-radius: 10px;
+  overflow: auto; /* Allow content to expand */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.erh2 {
+  text-align: center;
+  background-color: #4158D0;
+  background-image: linear-gradient(135deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+      -webkit-background-clip: text; /* Make the gradient apply only to the text */
+  color: transparent; /* Ensure the gradient is visible through the text */
+    margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.earnings-summary {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.earnings-card:hover{
+  transform: translateY(-5px);
+}
+.earnings-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+.erh3 {
+  color: #555;
+  font-size: 1.2em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.erp {
+  font-size: 2em;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.export-btn {
+  padding: 10px 20px;
+  color: #fff;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 45%;
+  transition: background 0.3s ease;
+}
+
+.export-btn:hover {
+  background: linear-gradient(90deg, #0056b3, #003f7d);
+}
+
+.chart-title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.chart {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bookings-list {
+  list-style: none;
+  padding: 30px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between items */
+  max-height: unset; /* Remove any fixed height limitation */
+}
+
+.tid {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  height: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tid:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.nope {
+  text-align: center;
+  color: #777;
+}
+
+.ercb {
+  font-size: 2rem; /* Larger font size for prominence */
+  font-weight: bold; /* Make it bold for emphasis */
+  text-align: center; /* Center align the heading */
+  color: #1a73e8; /* Use an appealing color, like Google blue */
+  margin-bottom: 30px; /* Add some space below */
+  text-transform: uppercase; /* Make the text uppercase for impact */
+  letter-spacing: 2px; /* Add letter spacing for a polished look */
+  background: linear-gradient(90deg, #4caf50, #1a73e8); /* Gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the gradient text-only */
+  position: relative; /* Allow for decorative elements */
+}
+
+  .erh2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ca174a; /* Decorative underline */
+  margin: 10px auto 0; /* Center the underline */
+  border-radius: 2px; /* Rounded edges for a smoother look */
+}
+.ercb::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #4caf50; /* Decorative underline */
+  margin: 10px auto 0; /* Center the underline */
+  border-radius: 2px; /* Rounded edges for a smoother look */
+}

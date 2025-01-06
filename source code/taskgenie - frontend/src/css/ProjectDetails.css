@@ -1,0 +1,861 @@
+/* ProjectDetails.css */
+.project-details-container {
+  position: relative;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Align vertically */
+  gap: 20px;               /* Space between the filter options */
+  margin-bottom: 20px;     /* Space between the filters and the provider list */
+}
+
+.filter-container label {
+  
+  font-size: 14px;
+}
+
+.filter-container select {
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 14px;
+  width: 150px;  /* Adjust width as needed */
+}
+
+.provider-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;  /* Space between provider cards */
+  justify-content: center;  /* Center provider cards */
+}
+
+
+.project-details-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Take full container height minus Navbar */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.project-details-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 1; /* Keep it below the content */
+}
+
+.project-details-content {
+  background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: center;
+  z-index: 2; /* Keep it above the overlay */
+}
+
+
+
+.book-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #0056b3;
+}
+
+  
+  .booking-modal {
+    width: 90%;
+    max-width: 600px; /* Set a maximum width */
+    max-height: 100vh; /* Set a maximum height */
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    overflow-y: auto; /* Allow vertical scrolling */
+    opacity: 0; /* Start invisible */
+    transform: translateY(-50px); /* Start above */
+    animation: fadeIn 0.5s forwards;
+  }
+  @keyframes fadeIn {
+    to {
+      opacity: 1; /* Fade to visible */
+      transform: translateY(0); /* Move to position */
+    }
+  }
+  .booking-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px); /* Apply a blur effect */
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: fadeInOverlay 0.5s forwards;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    opacity: 1; /* Fade to visible */
+  }
+}
+  .modal-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .booking-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .booking-form input,
+  .booking-form textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Slightly increase size on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  input:focus, textarea:focus {
+    border: 2px solid #007BFF; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  
+  .close-btn {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .close-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .booking-success {
+    text-align: center;
+  }
+  
+  .booking-success h2 {
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  
+  .booking-success p {
+    margin-bottom: 20px;
+  }
+  
+
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .confirmation-message {
+    color: green;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .alert-container {
+    position: fixed; /* Position fixed to center on the screen */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to truly center */
+    z-index: 1000; /* Ensure it's above other elements */
+    animation: fadeInAlert 0.5s ease-out; /* Animation for fade-in */
+}
+
+@keyframes fadeInAlert {
+    from {
+        opacity: 0; /* Start transparent */
+        transform: translate(-50%, -30%); /* Start a bit above */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translate(-50%, -50%); /* Center position */
+    }
+}
+
+.alert {
+    background-color: #f0fff0; /* Light green background */
+    border: 1px solid #28a745; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside alert */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.checkmark {
+    width: 24px; /* Size of the checkmark */
+    height: 24px; /* Size of the checkmark */
+    margin-right: 10px; /* Space between checkmark and text */
+    background-color: #28a745; /* Green background for checkmark */
+    clip-path: polygon(0 50%, 30% 80%, 100% 0, 100% 100%, 0 100%); /* Checkmark shape */
+    animation: checkmarkAnimate 0.5s ease-out; /* Animation for checkmark */
+}
+
+@keyframes checkmarkAnimate {
+    0% {
+        transform: scale(0); /* Start small */
+    }
+    50% {
+        transform: scale(1.2); /* Scale up a bit */
+    }
+    100% {
+        transform: scale(1); /* Final size */
+    }
+}
+
+.alert-message {
+    color: #333; /* Dark text color */
+    font-size: 18px; /* Increase font size */
+    margin: 0; /* Remove default margin */
+}
+
+
+
+.booking-container {
+  
+  text-align: center;
+  margin-top: 10px;
+}
+
+.book-now-btn {
+  padding: 15px 40px;
+  background-color: #09b6ef;
+  color: rgb(252, 251, 251);
+  font-family: "Nunito", sans-serif; 
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-now-btn:hover {
+  background-color: #0056b3;
+}
+
+.booking-steps {
+  width: 100%;
+
+  margin: 10px auto;
+  /* max-width: 800px; */
+  padding: 20px;
+  background-color: #f5e6e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.provider-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.provider-card {
+  flex: 1 1 calc(33.333% - 20px);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-color: #fff;
+}
+
+.provider-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.provider-card img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.next-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+.prev-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.next-btn, .prev-btn, .confirm-btn {
+  display: inline-block;
+  margin-right: 10px;
+}
+.payment {
+  width: 12em;
+  font-family: "Nunito", sans-serif !important;    
+  letter-spacing: 1px;
+  height: 3.5em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 6px 6px 12px #c5c5c5,
+              -6px -6px 12px #ffffff;
+ }
+ 
+ .payment::before {
+  content: '';
+  width: 0;
+  height: 3.5em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ .payment:hover::before {
+  width: 12em;
+ }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+/* Payment Container */
+.payment-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Payment Header */
+.payment-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.payment-header h1 {
+  font-size: 2rem;
+  color: #333333;
+}
+
+.payment-header p {
+  font-size: 1rem;
+  color: #666666;
+}
+
+/* Input Fields */
+.input-field {
+  margin-bottom: 1.5rem;
+}
+
+.input-field label {
+  display: block;
+  font-size: 1rem;
+  color: #444444;
+  margin-bottom: 0.5rem;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-field input:focus,
+.input-field select:focus,
+.input-field textarea:focus {
+  border-color: #66b3ff;
+  outline: none;
+}
+
+/* Card Type Selection */
+.card-type {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-type label {
+  display: inline-block;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.card-type input[type="radio"] {
+  display: none;
+}
+
+.card-type input[type="radio"] + span {
+  padding: 0.5rem 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-type input[type="radio"]:checked + span {
+  background-color: #66b3ff;
+  color: #ffffff;
+  border-color: #66b3ff;
+}
+
+/* Buttons */
+.confirm-btn  {
+  padding: 0.75rem 1.5rem;
+  background-color: #1e8733;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-btn :hover {
+  background-color: #3399ff;
+}
+
+/* Back Button */
+.back-button {
+  margin-top: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #66b3ff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  color: #3399ff;
+}
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #5c7c8a; /* Change color to match your design */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-weight: bold;
+  color: #5c7c8a;
+  transition: background-color 0.3s ease;
+
+}
+.step.active .circle {
+  background-color: #28a745;  /* Change color for active step */
+  box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.7); /* Glow effect */
+  /* transform: scale(1.2); */
+}
+
+.step.active {
+  opacity: 1;
+  transform: scale(1.1);  
+  animation: bounce 0.6s ease-out;  /* Adds bounce animation */
+}
+.step-title {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px; /* Adjust size as needed */
+  transition: color 0.3s ease;
+
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  top: 15px; /* Adjust position as needed */
+  left: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: #d3d3d3; /* Line color */
+}
+
+.step:last-child::after {
+  display: none; /* Hide line after the last step */
+}
+
+.active .circle {
+  background-color: #276681; /* Active step color */
+  color: white; /* Active step text color */
+}
+
+.active ~ .step::after {
+  background-color: #057aad; /* Active line color */
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.download {
+  line-height: 1;
+  background-color: transparent;
+  cursor: pointer;
+  /* display: flex;
+  align-items: center; */
+  gap: 0.35em;
+  padding: 0.75em 1em;
+  padding-right: 1.25em;
+  color: #fff;
+  border: 1px solid transparent;
+  font-weight: 700;
+  border-radius: 2em;
+  font-size: 1rem;
+  box-shadow: 0 0.7em 1.5em -0.5em hsla(180, 62%, 51%, 0.745);
+  transition: transform 0.3s;
+
+  background: linear-gradient(
+    90deg,
+    rgb(97, 219, 152) 0%,
+    rgb(89, 228, 238) 100%
+  );
+}
+
+.button__icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.download:hover {
+  border-color: #587f09;
+}
+
+.download:active {
+  transform: scale(0.98);
+  box-shadow: 0 0.5em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+}
+/* Container styling */
+.steps {
+  
+  margin-top: 20px;
+  padding: 20px;
+  /* max-width: 900px; */
+  background: linear-gradient(135deg, #f0f4f8, #dfe9f3);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.steps h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Label styling */
+label {
+  font-size: 1.1rem;
+  font-family: "Nunito", sans-serif;
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Input, Select, and Textarea styling */
+.steps input[type="text"],
+.steps select,
+.steps textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccd1d9;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.steps input[type="text"]:focus,
+.steps select:focus,
+.steps textarea:focus {
+  border-color: #4a90e2;
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(74, 144, 226, 0.15), inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Placeholder styling for a subtle hint */
+.steps input::placeholder,
+.steps textarea::placeholder {
+  color: #b0b8c1;
+  opacity: 0.8;
+}
+
+/* Textarea styling for better readability */
+.steps textarea {
+  resize: vertical;
+  height: 120px;
+  line-height: 1.5;
+}
+
+/* Error styling */
+.error {
+  border-color: #e74c3c !important;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+/* Button styling */
+.next-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+
+.form-input.error {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+.payment-container {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-type-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-type-selector label {
+  margin-right: 15px;
+}
+
+.card-icons img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+.form-input.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.expiry-cvv-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-summary {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.card-type-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-type-selector label {
+  margin-right: 15px;
+}
+
+.card-icons img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+.form-input.error {
+  border-color: red;
+}
+
+.tooltip {
+  font-size: 12px;
+  color: gray;
+}
+
+.card-preview {
+  margin-top: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.6s linear infinite;
+  margin-left: 5px; /* Optional: to space it next to the button text */
+}
+
+/* Animation for spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.filter-button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+

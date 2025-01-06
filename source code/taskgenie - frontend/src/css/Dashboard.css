@@ -1,0 +1,25 @@
+.dashboard-container {
+    display: flex;
+    /* max-width: 1000px; */
+    padding-left: 20px;
+
+  }
+
+  .content-area {
+    flex-grow: 1;
+    width: 800px;
+    padding: 20px;
+  }
+  
+  .profile-section, .booking-history-section, .payment-history-section, .account-modification-section {
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #2c3e50;
+  }
+  

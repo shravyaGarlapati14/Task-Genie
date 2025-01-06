@@ -1,0 +1,113 @@
+/* Account Modification Container */
+.account-modification-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Form Title */
+.account-modification-container h2 {
+  font-family: 'Nunito', sans-serif;
+  color: #007bff;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Form Container to Arrange Forms Side by Side */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Form Styling */
+.account-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  min-width: 350px;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Styling */
+.input-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .account-modification-container {
+    padding: 20px;
+  }
+
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .account-form {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+}

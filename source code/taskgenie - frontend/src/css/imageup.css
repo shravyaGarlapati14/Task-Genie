@@ -1,0 +1,203 @@
+
+
+/* Global Styles */
+.body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #a6c1ee, #fbc2eb);
+
+    box-sizing: border-box;
+}
+
+/* Update Profile Container */
+.update-profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    animation: fadeIn 1s ease;
+}
+
+.update-profile-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Profile Image Section */
+.profile-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    border: 5px solid #fbc2eb;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-upload-label {
+    display: inline-block;
+    background: #a6c1ee;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.image-upload-label:hover {
+    background: #6b9eff;
+}
+
+.image-upload-input {
+    display: none;
+}
+
+/* Success and Error Messages */
+.success {
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.error {
+    color: #e63946;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Profile Field Styles */
+.profile-field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.profile-field label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.field-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-input,
+textarea.profile-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    background: #f7f7f7;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-input:focus {
+    box-shadow: 0 0 5px rgba(106, 177, 249, 0.8);
+    border-color: #6ab1f9;
+    outline: none;
+}
+
+textarea.profile-input {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.edit-icon {
+    color: #6ab1f9;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.edit-icon:hover {
+    color: #3b89f9;
+}
+
+.field-display p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Profile Actions */
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.profile-actions .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.profile-actions .save-btn {
+    background: #28a745;
+}
+
+.profile-actions .save-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.profile-actions .cancel-btn {
+    background: #e63946;
+}
+
+.profile-actions .cancel-btn:hover {
+    background: #d82332;
+    transform: scale(1.05);
+}
+
+.profile-actions .edit-btn {
+    background: #6ab1f9;
+}
+
+.profile-actions .edit-btn:hover {
+    background: #3b89f9;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

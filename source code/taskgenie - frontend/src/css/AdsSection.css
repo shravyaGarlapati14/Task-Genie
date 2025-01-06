@@ -1,0 +1,276 @@
+.ads-section {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  color: #333;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);  
+  /* border-radius: 20px; */
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), -8px -8px 15px rgba(255, 255, 255, 0.5);
+}
+
+.ads-section h2 {
+  text-align: center;
+  font-family: "Nunito", sans-serif;    
+  font-size: 3rem; /* Increased font size for greater impact */
+  font-weight: 700; /* Bold weight for better prominence */
+  color: #4CAF50; /* A vibrant green for a fresh, lively look */
+  margin-bottom: 30px; /* Slightly larger margin to give it more breathing room */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Softer and more prominent shadow for depth */
+  background: linear-gradient(45deg, #3374ff, #1a91a6); /* Gradient effect to add a dynamic visual */
+  -webkit-background-clip: text; /* Make the gradient apply only to the text */
+  color: transparent; /* Ensure the gradient is visible through the text */
+  animation: shine 3s ease-in-out infinite; /* Animation for a shining effect */
+}
+
+/* Keyframes for a shining animation */
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  50% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: -200%;
+  }
+}
+
+
+.ads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.adpaid {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.swal2-input {
+  font-size: 16px;
+  padding: 10px;
+}
+
+
+.ads-section form {
+  background: #fff;
+  padding: 30px;
+  /* border-radius: 15px; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ads-section form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ads-section form input,
+.ads-section form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ads-section form input[type="file"] {
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.ads-section form button {
+  width: 100%;
+  padding: 12px 15px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ads-section form button:hover {
+  background: linear-gradient(90deg, #e52e71, #ff8a00);
+  transform: scale(1.05);
+}
+
+.ad-card {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 20px;
+  /* box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.5); */
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ad-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.7);
+}
+
+.ad-card img.adimg {
+  width: 100%; /* Full width of the card */
+  max-width: 300px; /* Set a maximum width */
+  max-height: 200px; /* Set a maximum height */
+  object-fit: cover; /* Ensures the image fills the area proportionally */
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ad-card img.adimg:hover {
+  transform: scale(1.02);
+}
+
+.ad-card h3.adtitle {
+  font-size: 1.8rem;
+  color: #ff8a00;
+  margin-bottom: 10px;
+}
+
+.ad-card p.addesc {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.ad-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.ad-card button {
+  padding: 10px 20px;
+  margin: 10px 5px 0 0;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ad-card button.adedit {
+  background: #4caf50;
+  color: #fff;
+}
+
+.ad-card button.adedit:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+.ad-card button.addelete {
+  background: #f44336;
+  color: #fff;
+}
+
+.ad-card button.addelete:hover {
+  background: #d32f2f;
+  transform: scale(1.05);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 25px;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #d32f2f;
+}
+
+
+/* General input container styles */
+input[type="datetime-local"],
+input[type="file"] {
+  width: 50%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #d1d1d1;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Focus state for both inputs */
+input[type="datetime-local"]:focus,
+input[type="file"]:focus {
+  border-color: #4CAF50;
+  background-color: #e8f7e6;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+}
+
+/* Hover effect for inputs */
+input[type="datetime-local"]:hover,
+input[type="file"]:hover {
+  border-color: #009688;
+  background-color: #e1f7f3;
+  box-shadow: 0 4px 10px rgba(0, 150, 136, 0.2);
+}
+
+/* Custom style for the datetime input */
+input[type="datetime-local"] {
+  padding-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Style for file input with custom button */
+input[type="file"] {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+input[type="file"]::before {
+  content: 'Choose a file';
+  display: block;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 150, 136, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="file"]:hover::before {
+  background-color: #45a049;
+}
+
+/* Visual effect when a file is selected */
+input[type="file"]:active::before {
+  background-color: #388e3c;
+}
+
+input[type="file"]:focus {
+  outline: none;
+}
+
+/* Style for the file input's hidden button */
+input[type="file"]::-webkit-file-upload-button {
+  display: none;
+}

@@ -1,0 +1,61 @@
+/* Enhanced Search Bar Styling */
+.navbar-search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .navbar-search-input {
+    width: 300px;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    border: 2px solid rgba(31,84,121,0.5); /* Subtle border */
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    color: rgb(23, 127, 224); /* White text for visibility */
+    transition: all 0.4s ease;
+    box-shadow: rgba(31, 84, 121, 0.3) 0px 4px 15px; /* Soft shadow */
+    backdrop-filter: blur(8px); /* Blur effect for transparency */
+  }
+  
+  .navbar-search-input::placeholder {
+    color: rgba(2, 59, 69, 0.7);
+    
+  }
+  
+  .navbar-search-input:focus {
+    background: rgba(31,84,121,0.2); /* Slightly deeper transparent color */
+    border-color: rgba(255,255,255,0.8); /* White border on focus */
+    box-shadow: 0 0 20px rgba(31, 84, 121, 0.6); /* Enhanced glow on focus */
+  }
+  
+  .navbar-search-input:hover {
+    background: rgba(255, 255, 255, 0.25); /* Light hover effect */
+    border-color: rgba(255, 255, 255, 0.7); /* Lighter border on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-search-input {
+      width: 200px;
+    }
+  }
+
+  .navbar.white-navbar {
+    background-color: white; /* White background for AllProjects */
+    color: #333; /* Change text color for contrast */
+  }
+  
+  .navbar-username {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    /* font-size: 6rem; */
+    background: linear-gradient(to left, #ef5350, #7e57c2, #2196f3, #0d0e0d, #f9a825);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  

@@ -1,0 +1,258 @@
+/* General Navbar Styling */
+.tasker-navbar {
+  font-family: "Nunito", sans-serif;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, rgba(114, 117, 126, 0.8), rgba(22, 4, 81, 0.8));
+    backdrop-filter: blur(10px); /* Glassmorphism */
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tasker-navbar:hover {
+    background: linear-gradient(135deg, rgba(106, 107, 109, 0.9), rgba(2, 20, 49, 0.9));
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Navbar Left - Logo */
+  .tasker-navbar-left .tasker-navbar-logo {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .tasker-navbar-left .tasker-navbar-logo:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  
+  /* Navbar Center - Links */
+  .tasker-navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tasker-navbar-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tasker-navbar-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Subtle background for links */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .tasker-navbar-link:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
+    transform: translateY(-5px);
+  }
+  
+  .tasker-navbar-link span {
+    margin-left: 8px;
+    font-size: 14px;
+  }
+  
+  /* Navbar Right - User Actions */
+  .tasker-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .tasker-navbar-username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .tasker-navbar-icon {
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .tasker-navbar-icon:hover {
+    transform: scale(1.2);
+    color: #fbbf24;
+  }
+  
+  .tasker-navbar-logout {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.3s ease;
+  }
+  
+  .tasker-navbar-logout:hover {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+  
+  /* Sign In and CTA Button */
+  .tasker-navbar-login {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .tasker-navbar-login:hover {
+    color: #d1d5db;
+    transform: translateY(-3px);
+  }
+  
+  .tasker-navbar-cta {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tasker-navbar-cta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
+  }
+  
+  /* Navbar Menu Icon */
+  .tasker-navbar-menu {
+    display: none;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .tasker-navbar-menu:hover {
+    color: #fbbf24;
+  }
+  
+  /* Sidebar Styling */
+  .tasker-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: rgba(30, 41, 59, 0.9);
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    padding: 30px 20px;
+    animation: slideIn 0.3s ease-out;
+    backdrop-filter: blur(15px); /* Glassmorphism for sidebar */
+    overflow-y: auto;
+  }
+  
+  .tasker-sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tasker-sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 15px 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .tasker-sidebar-link:hover {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #ffffff;
+    transform: translateX(10px);
+  }
+  
+  .tasker-sidebar-logout {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .tasker-sidebar-logout:hover {
+    background: #f87171;
+    transform: scale(1.1);
+  }
+  
+  .tasker-close-sidebar {
+    background: transparent;
+    color: #ffffff;
+    font-size: 32px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  /* Sidebar Animation */
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .tasker-navbar-center {
+      display: none;
+    }}  
+
+
+    .tasker-navbar-profile-image {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    

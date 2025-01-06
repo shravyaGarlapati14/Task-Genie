@@ -1,0 +1,360 @@
+.adshsection {
+    margin: 70px auto;
+    padding: 50px;
+    text-align: center;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);    
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15), 0 -15px 50px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    max-width: 1700px;
+    max-height: 700px;
+    backdrop-filter: blur(10px);
+}
+/* 
+.adhfd {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    margin-bottom: 50px;
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    font-family: "Nunito", sans-serif;    
+
+}
+
+.adhfd::before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: rgb(223,219,208);
+    background: linear-gradient(154deg, rgba(223,219,208,1) 0%, rgba(93,121,112,1) 71%, rgba(75,107,99,1) 81%, rgba(101,62,45,1) 100%);
+    border-radius: 8px;
+} */
+
+.adhfd{
+    font-family: 'Poppins', sans-serif; /* Modern and stylish font */
+    font-size: 2.5rem; /* Larger font size for emphasis */
+    font-weight: 700; /* Bold text */
+    color: #4CAF50; 
+    text-align: center; /* Center the heading */
+    text-transform: uppercase; /* Make the text all uppercase */
+    letter-spacing: 2px; /* Add spacing between letters for elegance */
+    margin-bottom: 20px; /* Space below the heading */
+    position: relative; /* For the decorative underline */
+  
+    background: #C02425;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F0CB35, #C02425);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F0CB35, #C02425); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .adhfd::after {
+    content: ''; /* Empty content for the underline */
+    display: block;
+    width: 50px; /* Adjust the underline width */
+    height: 5px; /* Thickness of the underline */
+    background: linear-gradient(90deg, #9e4904, #c9700c , #c3150b);
+    margin: 10px auto 0; /* Center the underline and add spacing */
+    border-radius: 10px; /* Rounded edges for the underline */
+  }
+
+.ad-carousel {
+    display: flex;
+    gap: 40px;
+    animation: scroll-ads 25s linear infinite;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ad-carousel > .adhcard {
+    flex: 0 0 70%; /* Adjust width for cards */
+    max-height: 550px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15), 0 -15px 50px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.adhcard:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), 0 -20px 50px rgba(255, 255, 255, 0.3);
+    filter: brightness(1.05);
+}
+
+.adhimg {
+    width: 100%;
+    height: 220px;
+    /* object-fit: cover; */
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* .adhimg:hover {
+    transform: scale(1.1);
+    filter: brightness(0.85);
+} */
+
+.adhtitle {
+    font-size: 2.2rem;
+    color: #ff6a00;
+    /* margin-bottom: 20px; */
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-family: "Nunito", sans-serif;    
+
+}
+
+.adhdesc {
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.6;
+    /* margin-bottom: 25px; */
+    font-weight: 400;
+}
+
+.adhtype {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+   padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+}
+
+.no-ads-message {
+    font-size: 1.7rem;
+    color: #777;
+    font-weight: 500;
+    /* margin-top: 30px; */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+/* Infinite scrolling animation */
+@keyframes scroll-ads {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+/* For responsive behavior */
+@media (max-width: 1200px) {
+    .ad-carousel > .adhcard {
+        flex: 0 0 45%; /* 2 ads per view on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .ad-carousel > .adhcard {
+        flex: 0 0 40%; /* 2 ads per view on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .ad-carousel > .adhcard {
+        flex: 0 0 85%; /* 1 ad per view on very small screens */
+    }
+}
+
+/* Smooth Hover Effects for Ads */
+.ad-carousel > .adhcard:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Stylish Scrollbar */
+.ad-carousel::-webkit-scrollbar {
+    width: 12px;
+}
+
+.ad-carousel::-webkit-scrollbar-thumb {
+    background: #ff6a00;
+    border-radius: 15px;
+}
+
+.ad-carousel::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Glowing Border Effect on Ad Hover */
+.ad-carousel > .adhcard:hover {
+    border: 2px solid #ff6a00;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), 0 -20px 50px rgba(255, 255, 255, 0.2);
+}
+
+/* Subtle Glow on Titles */
+.adhtitle {
+    text-shadow: 0 2px 4px rgba(255, 105, 0, 0.4);
+}
+
+
+
+
+
+
+.reviews-section {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 1200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .reviews-head {
+    font-family: 'Poppins', sans-serif; /* Modern and stylish font */
+    font-size: 2.0rem; /* Larger font size for emphasis */
+    font-weight: 700; /* Bold text */
+    color: #4CAF50; /* Eye-catching green color */
+    text-align: center; /* Center the heading */
+    text-transform: uppercase; /* Make the text all uppercase */
+    letter-spacing: 2px; /* Add spacing between letters for elegance */
+    margin-bottom: 20px; /* Space below the heading */
+    position: relative; /* For the decorative underline */
+  
+    /* Add a gradient effect */
+    background: linear-gradient(90deg, #044d63, #24839d , #3e939a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .reviews-head::after {
+    content: ''; /* Empty content for the underline */
+    display: block;
+    width: 50px; /* Adjust the underline width */
+    height: 5px; /* Thickness of the underline */
+    background: #4CAF50; /* Match the heading color */
+    margin: 10px auto 0; /* Center the underline and add spacing */
+    border-radius: 10px; /* Rounded edges for the underline */
+  }
+  
+  .reviews-carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .reviews-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .reviews-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  .review-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 0 0 310px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: center;
+  }
+  
+  .review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .review-client {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #34495e;
+  }
+  
+  .review-text {
+    font-size: 1rem;
+    margin: 15px 0;
+    color: #555;
+    font-style: italic;
+  }
+  
+  .review-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  .review-rating {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    margin-top: 10px;
+  }
+  
+  /* Arrow buttons */
+  .arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, #722fb6, #9170a7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: rgb(147, 210, 221); */
+    border: none;
+    /* border-radius: 50%; */
+    /* padding: 10px; */
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+    transition: background-color 0.3s ease;
+  }
+  
+  .arrow-button:hover {
+    background-color: #34495e;
+    text-shadow: 0 14px 21px rgba(123, 11, 220, 0.5);
+
+  }
+  
+  .arrow-button.left-arrow {
+    left: -1px;
+  }
+  
+  .arrow-button.right-arrow {
+    right: -1px;
+  }
+  

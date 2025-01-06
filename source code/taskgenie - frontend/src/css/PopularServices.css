@@ -1,0 +1,81 @@
+.popular-services-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.more-services-btn {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 20px;
+    height: 30px;
+    padding: 0px 25px;
+    text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+    background: linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%);
+    transition: all 0.5s ease 0s;
+}
+
+.more-services-btn:hover {
+    box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+    color: #fff;
+    transition: all 0.1s ease 0s;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.service-image {
+    width: 100%;
+    height: auto; /* Adjust height as necessary */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.1); /* Scale image on hover */
+}
+
+.service-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8); /* Background with transparency */
+    padding: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.service-card .service-info {
+    opacity: 0.85; /* Show details on hover */
+    color: black;
+}
+
+.service-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-card-link:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
